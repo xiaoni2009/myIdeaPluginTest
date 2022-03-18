@@ -1,0 +1,34 @@
+<idea-plugin>
+    <id>org.example.myIdeaPluginTest</id>
+    <name>Plugin display name here</name>
+    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+    <description><![CDATA[
+    Enter short description for your plugin here.<br>
+    <em>most HTML tags may be used</em>
+    ]]></description>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <group id="MyPlugin.TestMenu" text="_Test Menu" description="Test Menu">
+            <!-- 放入主菜单 -->
+            <add-to-group group-id="MainMenu" anchor="last" />
+            <action id="MyPlugin.TextBoxes" class="com.test.MyTestBox"
+                    text="Text _Boxes" description="A simple test" />
+        </group>
+        <group id="MyPlugin.TestMenu2" text="_Test Menu" description="Test Menu2">
+            <!-- 放入工具菜单 -->
+            <add-to-group group-id="ToolsMenu" anchor="last" />
+            <action id="MyPlugin.TextBoxes" class="com.test.MyTestBox"
+                    text="Text _Boxes" description="A simple test" />
+        </group>
+    </actions>
+</idea-plugin>
